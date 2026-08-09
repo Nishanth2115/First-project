@@ -25,10 +25,17 @@ const PORT = process.env.PORT || 4000;
    Middleware
 --------------------------------------------------------- */
 
-// Allow the frontend (localhost:3000) to call this server
+// Allow the frontend to call this server from local development and the deployed Vercel app
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+  "https://first-project-bay-ten.vercel.app",
+];
+
 app.use(cors({
-  origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
+  origin: allowedOrigins,
   methods: ["GET", "POST", "OPTIONS"],
+  credentials: true,
 }));
 
 // Parse JSON request bodies
