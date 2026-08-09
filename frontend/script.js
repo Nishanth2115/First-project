@@ -16,7 +16,7 @@
    CONFIG — backend base URL
    Change this if you deploy the backend elsewhere.
 --------------------------------------------------------- */
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://first-project-ss07.onrender.com";
 
 /* ---------------------------------------------------------
    AI MESSAGES & DISPLAY HELPERS
